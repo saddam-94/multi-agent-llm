@@ -41,8 +41,8 @@ def parse_args() -> None:
     program.add_argument('--query', help='startup website name or prodcut name', dest='query', default='llm agent')
     # program.add_argument('-t', '--target', help='select an target image or video', dest='target_path')
     # program.add_argument('-o', '--output', help='select output file or directory', dest='output_path')
-    program.add_argument('--device', help='machine type (choices: cpu, cuda, ...)', dest='device', default=['cuda'])
-    program.add_argument('--model-name', help='vllm model name', dest='model_name', action='store_true', default='Qwen/Qwen2.5-0.5B-Instruct')
+    program.add_argument('--device', help='machine type (choices: cpu, cuda, ...)', dest='device', default="cuda")
+    program.add_argument('--model-name', help='vllm model name', dest='model_name', action='store_true', default="Qwen/Qwen2.5-0.5B-Instruct")
 
     args = program.parse_args()
     return args
